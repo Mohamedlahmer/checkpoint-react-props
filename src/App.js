@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import Profile from './profile/Profile';
+import tof from './assets/pic.jpg';
 import './App.css';
 
 function App() {
+  
+  const handleName = (firstname,lastname) => {
+    alert(`Hello ${firstname} ${lastname}`)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='page'>
+            <Profile id='mouse'
+                firstname='Mohamed' 
+                lastname='Lahmer' 
+                bio='Graduated 2017' 
+                profession='Water ressources engineer' 
+                handleName={handleName}     
+            >
+      <img className='image' src={tof} alt='pic' width='500px'/>
+      </Profile>
     </div>
   );
 }
 
 export default App;
+
